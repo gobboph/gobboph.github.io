@@ -46,8 +46,40 @@ PLUGINS = [
 COVER_IMG_URL = '/images/bamboo.JPG'
 AUTHOR_EMAIL = 'robertogobbetti@gmail.com'
 TAGLINE = ''
-DISQUS_SITENAME = ''
+DISQUS_SITENAME = 'gobbo_ph'
 
+
+
+ARTICLE_URL = 'blog/{slug}/'
+ARTICLE_SAVE_AS = 'blog/{slug}/index.html'
+AUTHOR_URL = 'blog/author/{slug}/'
+AUTHOR_SAVE_AS = 'blog/author/{slug}/index.html'
+CATEGORY_URL = 'blog/category/{slug}/'
+CATEGORY_SAVE_AS = 'blog/category/{slug}/index.html'
+TAG_URL = 'blog/tag/{slug}/'
+TAG_SAVE_AS = 'blog/tag/{slug}/index.html'
+
+# do not make pages of the type {slug}/index.html as this clashed with
+# other github repositories with the same name as {slug}
+PAGE_URL = '{slug}.html'
+PAGE_SAVE_AS = '{slug}.html'
+
+ARCHIVES_SAVE_AS = 'blog/archives.html'
+AUTHORS_SAVE_AS = 'blog/authors.html'
+CATEGORIES_SAVE_AS = 'blog/categories.html'
+TAGS_SAVE_AS = 'blog/tags.html'
+
+MENUITEMS = [
+	('Projects', 'projects.html'),
+	('Blog', 'blog/'),
+]
+DISPLAY_PAGES_ON_MENU = True
+
+
+# plugin render_math
+MATH = {'color':'blue', 'align':'left'}
+
+TYPOGRIFY = True
 
 
 
