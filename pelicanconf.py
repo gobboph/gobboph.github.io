@@ -29,3 +29,25 @@ DEFAULT_PAGINATION = 10
 
 
 STATIC_PATHS = (['images', 'files', 'extras'])
+
+THEME = "pure"
+
+# plugins
+PLUGIN_PATH = 'pelican-plugins'
+PLUGINS = [
+	'sitemap', 'gravatar', 'render_math',
+	'liquid_tags.img', 'liquid_tags.video',
+	'liquid_tags.youtube', 'liquid_tags.vimeo',
+	'liquid_tags.include_code', 
+	# 'liquid_tags.notebook',
+]
+
+# pure theme specific
+COVER_IMG_URL = '/images/bamboo.JPG'
+AUTHOR_EMAIL = 'robertogobbetti@gmail.com'
+TAGLINE = ''
+DISQUS_SITENAME = ''
+
+
+
+
