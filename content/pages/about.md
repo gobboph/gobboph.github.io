@@ -7,4 +7,6 @@ url: /
 save_as: index.html
 
 
+{% img img-thumbnail float-right /images/face.jpg 250 %}
+
 This is me.
