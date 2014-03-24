@@ -4,6 +4,6 @@ Category:
 Media Tags: averlo 
 Slug: first-entry 
 Author: Roberto Gobbetti
-Summary: My part of the Higgs discovery story in the New York Times.
+Summary: first blog post.
 
 First blog post.
