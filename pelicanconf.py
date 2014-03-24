@@ -37,6 +37,8 @@ DEFAULT_PAGINATION = 10
 
 
 STATIC_PATHS = (['images', 'files', 'extras'])
+#PATH_METADATA = (['content'])
+
 
 THEME = "pure"
 
@@ -52,6 +54,7 @@ PLUGINS = [
 
 # pure theme specific
 COVER_IMG_URL = '/images/bamboo.JPG'
+PROFILE_IMAGE_URL = '/images/avere.JPG'
 AUTHOR_EMAIL = 'robertogobbetti@gmail.com'
 TAGLINE = ''
 DISQUS_SITENAME = 'gobbo_ph'
