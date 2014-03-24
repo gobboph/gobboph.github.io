@@ -15,12 +15,18 @@ FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
+DISPLAY_PAGES_ON_MENU = True
+
+
 # Blogroll
 LINKS =  ()
 
 # Social widget
 SOCIAL = (('twitter', 'https://twitter.com/robertogobbetti'),
-          )
+          ('github','https://github.com/gobboph'),
+          ('linkedin','https://www.linkedin.com/in/robertogobbetti'),)
+
+TWITTER_USERNAME = 'robertogobbetti'
 
 DEFAULT_PAGINATION = 10
 
@@ -70,7 +76,7 @@ CATEGORIES_SAVE_AS = 'blog/categories.html'
 TAGS_SAVE_AS = 'blog/tags.html'
 
 MENUITEMS = [
-	('Projects', 'projects.html'),
+	#('Projects', 'projects.html'),
 	('Blog', 'blog/'),
 ]
 DISPLAY_PAGES_ON_MENU = True
