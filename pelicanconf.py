@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Roberto Gobbetti'
 SITENAME = u'Roberto Gobbetti'
-SITEURL = ''
+SITEURL = 'http://localhost:8000'
 
 TIMEZONE = 'America/New York'
 
@@ -16,6 +16,8 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
 DISPLAY_PAGES_ON_MENU = True
+
+GITHUB_URL = 'http://github.com/gobboph'
 
 
 # Blogroll
