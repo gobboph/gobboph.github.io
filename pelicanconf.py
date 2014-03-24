@@ -39,8 +39,10 @@ DEFAULT_PAGINATION = 10
 STATIC_PATHS = (['images', 'files', 'extras'])
 #PATH_METADATA = (['content'])
 
+INDEX_SAVE_AS= 'blog/index.html'
 
-THEME = "pure"
+
+THEME = "pureS"
 
 # plugins
 PLUGIN_PATH = 'pelican-plugins'
