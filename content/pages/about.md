@@ -13,7 +13,7 @@ I am a Ph.D. candidate in Theoretical Physics at the [Center for Cosmology and P
 
 In more details, my research focuses on designing a way our universe could have been born and look the way it does. Even if we do have a good amount information about the very first moments of our universe, still making sense of it all in a nice form is an open challenge.
 
-You can find a list of my papers down in this page, or [here](http://inspirehep.net/search?ln=en&p=find+a+gobbetti&of=hb&action_search=Search). Here is my full [CV in pdf]({filename}/files/CV.pdf). Feel free to contact me at <roberto.gobbetti@nyu.edu>.
+You can find a list of my papers down here and my [CV in pdf]({filename}/files/CV.pdf). Feel free to contact me at <roberto.gobbetti@nyu.edu>.
 
 
 
@@ -24,3 +24,5 @@ You can find a list of my papers down in this page, or [here](http://inspirehep.
 2. G. D'Amico, R. Gobbetti, M. Kleban, M. Schillo, *Unwinding Inflation*, JCAP 1303 (2013) 004, Nov 2012 [arXiv:1211.4589](http://arxiv.org/abs/1211.4589).
 3. G. D'Amico, R. Gobbetti, M. Kleban, M. Schillo, *Inflation from Flux Cascades*, Phys.Lett.~B725 (2013) 218-222, Nov 2012 [arXiv:1211.3416](http://arxiv.org/abs/1211.3416).
 4. R. Gobbetti, M. Kleban, *Analyzing Cosmic Bubble Collisions*, JCAP 1205 (2012) 025, Jan 2012, [arXiv:1201.6380](http://arxiv.org/abs/1201.6380).
+
+Or check out the [list](http://inspirehep.net/search?ln=en&p=find+a+gobbetti&of=hb&action_search=Search) and [author page](http://inspirehep.net/search?ln=en&p=find+a+gobbetti&of=hb&action_search=Search) on inspire
