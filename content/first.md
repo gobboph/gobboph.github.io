@@ -1,6 +1,6 @@
 Title: First blog post
-Date: 2014-03-23 11.28
-Category: 
+Date: 2014-03-23 11:28
+Category: averlo
 Media Tags: averlo 
 Slug: first-entry 
 Author: Roberto Gobbetti
