@@ -39,6 +39,12 @@ DEFAULT_PAGINATION = 10
 STATIC_PATHS = (['images', 'files', 'extras'])
 #PATH_METADATA = (['content'])
 
+EXTRA_PATH_METADATA = {
+    #'extras/robots.txt': {'path': 'robots.txt'},
+    'extras/favicon.ico': {'path': 'favicon.ico'},
+}
+
+
 INDEX_SAVE_AS= 'blog/index.html'
 
 
