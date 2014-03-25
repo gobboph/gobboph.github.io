@@ -7,7 +7,7 @@ url: /
 save_as: index.html
 
 
-{% img img-thumbnail float-right /images/face.jpg 250 %}
+{% img img-thumbnail float-right /images/avere.jpg 250 %}
 
 I am a Ph.D. candidate in Theoretical Physics at the [Center for Cosmology and Particle Physics](http://ccpp.nyu.edu/), at [New York University](http://www.nyu.edu). I work both on Cosmology and String Theory, trying to explain the first using the second. I was born in Milan, Italy, and before moving to New York City I studied Physics at [Pavia University](http://www.unipv.eu/site/en/home.html) and [SISSA](https://www.sissa.it/).
 
