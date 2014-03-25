@@ -26,3 +26,20 @@ You can find a list of my papers down here and my [CV in pdf]({filename}/files/C
 4. R. Gobbetti, M. Kleban, *Analyzing Cosmic Bubble Collisions*, JCAP 1205 (2012) 025, Jan 2012, [arXiv:1201.6380](http://arxiv.org/abs/1201.6380).
 
 Or check out the [list](http://inspirehep.net/search?ln=en&p=find+a+gobbetti&of=hb&action_search=Search) and [author page](http://inspirehep.net/search?ln=en&p=find+a+gobbetti&of=hb&action_search=Search) on inspire
+
+
+
+
+
+## Selected Talks
+
+1. *Unwinding Inflation*, New York University - Abu Dhabi, Abu Dhabi, UAE, 11/2014 ([pdf]({filename}/files/NYU-AD.pdf)).
+2. *Unwinding Inflation*, International Center for Theoretical Physics (ICTP), Trieste, Italy, 05/2014 ([pdf]({filename}/files/ICTP.pdf)).
+3. *Cosmic Bubble Collisions*, Yukawa Institute for Theoretical Physics (YITP), Kyoto, Japan, 07/2012 ([pdf]({filename}/files/YITP.pdf)).
+
+
+
+
+
+
+
