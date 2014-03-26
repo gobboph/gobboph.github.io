@@ -55,12 +55,7 @@ if not LooseVersion(IPython.__version__) >= '1.0':
 
 from IPython import nbconvert
 
-try:
-    from IPython.nbconvert.filters.highlight import _pygments_highlight
-except ImportError:
-    # IPython < 2.0
-    from IPython.nbconvert.filters.highlight import _pygment_highlight as _pygments_highlight
-
+from IPython.nbconvert.filters.highlight import _pygment_highlight
 from pygments.formatters import HtmlFormatter
 
 from IPython.nbconvert.exporters import HTMLExporter
@@ -69,10 +64,9 @@ from IPython.config import Config
 from IPython.nbformat import current as nbformat
 
 try:
-    from IPython.nbconvert.preprocessors import Preprocessor
+    from IPython.nbconvert.transformers import Transformer
 except ImportError:
-    # IPython < 2.0
-    from IPython.nbconvert.transformers import Transformer as Preprocessor
+    raise ValueError("IPython version 2.0 is not yet supported")
 
 from IPython.utils.traitlets import Integer
 from copy import deepcopy
@@ -117,17 +111,6 @@ pre.ipynb {
   font-size: 13px;
 }
 
-/* remove the prompt div from text cells */
-div.text_cell .prompt {
-    display: none;
-}
-
-/* remove horizontal padding from text cells, */
-/* so it aligns with outer body text */
-div.text_cell_render {
-    padding: 0.5em 0em;
-}
-
 img.anim_icon{padding:0; border:0; vertical-align:middle; -webkit-box-shadow:none; -box-shadow:none}
 </style>
 
@@ -161,7 +144,7 @@ CSS_WRAPPER = """
 
 
 #----------------------------------------------------------------------
-# Create a custom preprocessor
+# Create a custom transformer
 class SliceIndex(Integer):
     """An integer trait that accepts None"""
     default_value = None
@@ -173,21 +156,19 @@ class SliceIndex(Integer):
             return super(SliceIndex, self).validate(obj, value)
 
 
-class SubCell(Preprocessor):
+class SubCell(Transformer):
     """A transformer to select a slice of the cells of a notebook"""
     start = SliceIndex(0, config=True,
                        help="first cell of notebook to be converted")
     end = SliceIndex(None, config=True,
                      help="last cell of notebook to be converted")
 
-    def preprocess(self, nb, resources):
+    def call(self, nb, resources):
         nbc = deepcopy(nb)
-        for worksheet in nbc.worksheets:
+        for worksheet in nbc.worksheets :
             cells = worksheet.cells[:]
             worksheet.cells = cells[self.start:self.end]
         return nbc, resources
-
-    call = preprocess # IPython < 2.0
 
 
 #----------------------------------------------------------------------
@@ -224,11 +205,9 @@ pelican_loader = DictLoader({'pelicanhtml.tpl':
 #----------------------------------------------------------------------
 # Custom highlighter:
 #  instead of using class='highlight', use class='highlight-ipynb'
-def custom_highlighter(source, language='ipython', metadata=None):
+def custom_highlighter(source, language='ipython'):
     formatter = HtmlFormatter(cssclass='highlight-ipynb')
-    if not language:
-        language = 'ipython'
-    output = _pygments_highlight(source, formatter, language)
+    output = _pygment_highlight(source, formatter, language)
     return output.replace('<pre>', '<pre class="ipynb">')
 
 
@@ -273,17 +252,12 @@ def notebook(preprocessor, tag, markup):
                     {'enabled':True, 'highlight_class':'.highlight-ipynb'},
                 'SubCell':
                     {'enabled':True, 'start':start, 'end':end}})
-    
-    if LooseVersion(IPython.__version__) >= '2.0':
-        subcell_kwarg = dict(preprocessors=[SubCell])
-    else:
-        subcell_kwarg = dict(transformers=[SubCell])
-    
+
     exporter = HTMLExporter(config=c,
                             template_file='basic',
                             filters={'highlight2html': custom_highlighter},
-                            extra_loaders=[pelican_loader],
-                            **subcell_kwarg)
+                            transformers=[SubCell],
+                            extra_loaders=[pelican_loader])
 
     # read and parse the notebook
     with open(nb_path) as f:

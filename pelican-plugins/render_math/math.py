@@ -18,6 +18,7 @@ for template builders that want to adjust the look and feel of the math.
 See README for more details.
 """
 
+from __future__ import print_function
 import os
 import re
 
@@ -54,7 +55,7 @@ def binary_search(match_tuple, ignore_within):
     # Find first value in array where predicate is False
     # predicate function: tupleList[mid][0] < t[index]
     while lo < hi:
-        mid = lo + (hi-lo+1)//2
+        mid = lo + (hi-lo+1)/2
         if ignore_within[mid][0] < match_tuple[0]:
             lo = mid
         else:
