@@ -37,9 +37,10 @@ Or check out the [list](http://inspirehep.net/search?ln=en&p=find+a+gobbetti&of=
 2. *Unwinding Inflation*, International Center for Theoretical Physics (ICTP), Trieste, Italy, 05/2014 ([pdf]({filename}/files/ICTP.pdf)).
 3. *Cosmic Bubble Collisions*, Yukawa Institute for Theoretical Physics (YITP), Kyoto, Japan, 07/2012 ([pdf]({filename}/files/YITP.pdf)).
 
-{% img img-thumbnail float-left /images/blackboard.jpg 350 %}
+<!--{% img img-thumbnail float-left /images/blackboard.jpg 350 %}
 
 Unfortunately I cannot upload the ones given at a blackboard, but here is a picture of me giving one (No, I do not always drink while giving talks).
+-->
 
 
 
