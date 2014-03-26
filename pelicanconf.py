@@ -98,7 +98,7 @@ DISPLAY_PAGES_ON_MENU = True
 # plugin render_math
 MATH = {'color':'blue', 'align':'left'}
 
-TYPOGRIFY = True
+#TYPOGRIFY = True
 
 
 
