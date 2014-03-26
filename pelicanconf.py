@@ -89,7 +89,7 @@ CATEGORIES_SAVE_AS = 'blog/categories.html'
 TAGS_SAVE_AS = 'blog/tags.html'
 
 MENUITEMS = [
-	#('Projects', 'projects.html'),
+	('Projects', 'projects.html'),
 	('Blog', 'blog/'),
 ]
 DISPLAY_PAGES_ON_MENU = True
