@@ -1,7 +1,7 @@
 Title: First blog post
 Date: 2014-03-27 18:30
-Category: Miscellanea
-Tags: Miscellanea
+Category: miscellanea
+Tags: miscellanea
 Slug: first-post 
 Author: Roberto Gobbetti
 Summary: Opening the blog.
