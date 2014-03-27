@@ -51,7 +51,7 @@ INDEX_SAVE_AS= 'blog/index.html'
 THEME = "pureS"
 
 # plugins
-PLUGIN_PATH = 'pelican-plugins2'
+PLUGIN_PATH = 'pelican-plugins'
 PLUGINS = [
 	'sitemap', 'gravatar', 'render_math',
 	'liquid_tags.img', 'liquid_tags.video',
