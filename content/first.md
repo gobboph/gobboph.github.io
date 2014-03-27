@@ -1,5 +1,5 @@
 Title: First blog post
-Date: 2014-03-27 06:30pm
+Date: 2014-03-27 18:30
 Category: Miscellanea
 Tags: Miscellanea
 Slug: first-post 
