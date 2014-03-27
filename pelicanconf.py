@@ -6,7 +6,7 @@ AUTHOR = u'Roberto Gobbetti'
 SITENAME = u'Roberto Gobbetti'
 SITEURL = 'http://localhost:8000'
 
-TIMEZONE = 'America/New York'
+TIMEZONE = 'America/New_York'
 
 DEFAULT_LANG = u'en'
 
@@ -51,7 +51,7 @@ INDEX_SAVE_AS= 'blog/index.html'
 THEME = "pureS"
 
 # plugins
-PLUGIN_PATH = '../pelican-plugins'
+PLUGIN_PATH = 'pelican-plugins'
 PLUGINS = [
 	'sitemap', 'gravatar', 'render_math',
 	'liquid_tags.img', 'liquid_tags.video',
