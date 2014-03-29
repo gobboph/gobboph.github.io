@@ -62,7 +62,7 @@ PLUGINS = [
 ]
 
 # pure theme specific
-COVER_IMG_URL = '/images/bamboo.jpg'
+COVER_IMG_URL = '/images/bamboo.JPG'
 #PROFILE_IMAGE_URL = '/images/avere.JPG'
 AUTHOR_EMAIL = 'robertogobbetti@gmail.com'
 TAGLINE = ''
