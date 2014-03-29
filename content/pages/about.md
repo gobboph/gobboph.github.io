@@ -22,7 +22,7 @@ You can find a list of my papers down here and my [CV in pdf]({filename}/files/C
 
 1.  G. D'Amico, R. Gobbetti, M. Kleban, M. Schillo, *Large-Scale Anomalies from Primordial Dissipation*, JCAP 11 (2013) 013, Jun 2013, [arXiv:1306.6872](http://arxiv.org/abs/1306.6872).
 2. G. D'Amico, R. Gobbetti, M. Kleban, M. Schillo, *Unwinding Inflation*, JCAP 1303 (2013) 004, Nov 2012 [arXiv:1211.4589](http://arxiv.org/abs/1211.4589).
-3. G. D'Amico, R. Gobbetti, M. Kleban, M. Schillo, *Inflation from Flux Cascades*, Phys.Lett.~B725 (2013) 218-222, Nov 2012 [arXiv:1211.3416](http://arxiv.org/abs/1211.3416).
+3. G. D'Amico, R. Gobbetti, M. Kleban, M. Schillo, *Inflation from Flux Cascades*, Phys.Lett. B725 (2013) 218-222, Nov 2012 [arXiv:1211.3416](http://arxiv.org/abs/1211.3416).
 4. R. Gobbetti, M. Kleban, *Analyzing Cosmic Bubble Collisions*, JCAP 1205 (2012) 025, Jan 2012, [arXiv:1201.6380](http://arxiv.org/abs/1201.6380).
 
 Or check out the [list](http://inspirehep.net/search?ln=en&p=find+a+gobbetti&of=hb&action_search=Search) and [author page](http://inspirehep.net/search?ln=en&p=find+a+gobbetti&of=hb&action_search=Search) on inspire
