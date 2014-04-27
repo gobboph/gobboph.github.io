@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Roberto Gobbetti, ">
+
+        <link rel="alternate"  href="/feeds/all.atom.xml" type="application/atom+xml" title="Roberto Gobbetti Full Atom Feed"/>
+
+        <title>Congress Words Update // Roberto Gobbetti // </title>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/theme/css/pure.css">
+    <link rel="stylesheet" href="/theme/css/pygments.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
+</head>
+
+<body>
+<div class="pure-g-r" id="layout">
+    <div class="sidebar sidebar-article pure-u">
+        <header class="header-article">
+            <hgroup>
+                <a href="/blog/author/roberto-gobbetti/" title="See posts by Roberto Gobbetti">
+                    <img class="article-avatar" alt="Roberto Gobbetti" src="http://www.gravatar.com/avatar/24b3dc72ade2326bdc5c9741bd02aa51">
+                </a>
+                <h2 class="article-info">Roberto Gobbetti</h2>
+                <small class="about-author"></small>
+                <h5>published</h5>
+                <p>Sat 26 April 2014</p>
+                <a href="/">&larr;Home</a>
+            </hgroup>
+        </header>
+    </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>Congress Words Update</h1>
+                        <p class="post-meta">
+                            // under
+                                <a class="post-category" href="/blog/tag/programming/">programming</a>
+                                <a class="post-category" href="/blog/tag/social/">social</a>
+                            in <a class="post-category" href="/blog/category/programming/">programming</a>
+                        </p>
+                </header>
+            </section>
+            <p>A couple of days ago I decided to learn some JavaScript. I have been toying for a while with the idea of extending my little congress_words project to a website, so what better occasion?</p>
+<p>I rewrote the project so it runs entirely on JavaScript, using only jQuery and <a href="http://gobboph.github.io/congress_words/">here</a> is the result.</p>
+<p>The script is not too complicated, but it works well and, most importantly, I learned a lot while doing it; now I feel way more confident in my beaing able to learn something quickly. You can find the code at the github page of the <a href="https://github.com/gobboph/congress_words/tree/gh-pages">project</a> (in the master branch you can still see the python script).</p>
+<p>Play with <a href="http://gobboph.github.io/congress_words/">it</a> and let me know what you think.</p>
+            <div class="hr"></div>
+            <a href="#" class="go-top">Go Top</a>
+<div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = "gobbo_ph"; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div><footer class="footer">
+    <p>&copy; Roberto Gobbetti 2014 &ndash;
+        Built with a modified <a href="https://github.com/svenkreiss/pure">Pure Theme</a>
+        for <a href="http://blog.getpelican.com/">Pelican</a>.
+    </p>
+</footer>        </div>
+    </div>
+</div>
+    <script>
+        var $top = $('.go-top');
+
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $top.fadeIn(200);
+            } else {
+                $top.fadeOut(200);
+            }
+        });
+
+        // Animate the scroll to top
+        $top.click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+        })
+
+        // Makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        $('body').on('click', 'a[href="#"]', function(event) {
+            event.preventDefault();
+        });
+    </script>
+</body>
+</html>
