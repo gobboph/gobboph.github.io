@@ -4,7 +4,7 @@ Category: science
 Tags: science
 Slug: unwinding_inflation
 Author: Roberto Gobbetti
-Summary: unwinding inflation getting attention
+Summary: Unwinding Inflation is even more interesting in light of new observations
 
 The data release of [BICEP2](http://bicepkeck.org/) a couple of weeks ago caused much excitement in the physics community and justly so. First of all we were able to detect gravitational waves for the first time, albeit not directly. These gravitational waves were produced in a very early stage of our universe, as predicted by the inflationary paradigm, which in turn gets an important observational confirmation. Although we need confirmation from other experiments, the amount of gravitational waves that has been detected is much more than many people expected, thus ruling out the vast majority of models of inflation based on a microscopic theory of the very high energy (see String Theory).
 
