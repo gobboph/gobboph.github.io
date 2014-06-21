@@ -5,7 +5,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/index.html</loc>
-<lastmod>2014-04-26T20:46:57-00:00</lastmod>
+<lastmod>2014-06-21T13:22:17-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -20,6 +20,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>/projects.html</loc>
 <lastmod>2014-03-26T00:00:00-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/blog/congress_words_3/</loc>
+<lastmod>2014-06-21T12:45:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -61,7 +68,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/blog/category/programming/</loc>
-<lastmod>2014-04-26T20:00:00-00:00</lastmod>
+<lastmod>2014-06-21T12:45:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -89,21 +96,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/blog/tag/programming/</loc>
-<lastmod>2014-04-26T20:00:00-00:00</lastmod>
+<lastmod>2014-06-21T12:45:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/blog/tag/social/</loc>
-<lastmod>2014-04-26T20:00:00-00:00</lastmod>
+<lastmod>2014-06-21T12:45:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/blog/author/roberto-gobbetti/</loc>
-<lastmod>2014-04-26T20:00:00-00:00</lastmod>
+<lastmod>2014-06-21T12:45:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
