@@ -1,7 +1,7 @@
 Title: Election Words
 Date: 2014-08-04 12:50
 Category: programming
-Tags: progamming, social
+Tags: programming, social
 Slug: election_words
 Author: Roberto Gobbetti
 Summary: What should you say to get elected?
