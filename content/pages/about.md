@@ -1,5 +1,5 @@
 Title: About
-Date: 2014-03-23
+Date: 2014-09-26
 Slug: about
 Authors: Roberto Gobbetti
 Summary: Short description
@@ -9,23 +9,28 @@ save_as: index.html
 
 {% img img-thumbnail float-right /images/face.jpg 250 %}
 
-I am a research assistant at the [Center for Cosmology and Particle Physics](http://ccpp.nyu.edu/), at [New York University](http://www.nyu.edu), where I recently received a Ph.D. in Theoretical Physics. I work both on Cosmology and String Theory, trying to explain the first using the second. I was born in Milan, Italy, and before moving to New York City I studied Physics at [Pavia University](http://www.unipv.eu/site/en/home.html) and [SISSA](https://www.sissa.it/).
+I am a postdoctoral researcher at [Delta Institute for Theoretical Physics](http://www.d-itp.nl/) and at the [Institute for Theoretical Physics](http://web.science.uu.nl/itf/), at [Utrecht University](www.uu.nl/en). I moved to the Netherlands after receiving my Ph.D. in Physics at [New York University](http://www.nyu.edu) where I worked at the [Center for Cosmology and Particle Physics](http://ccpp.nyu.edu/).
 
-In more details, my research focuses on designing a way our universe could have been born and look the way it does. Even if we do have a good amount of information about the very first moments of our universe, still making sense of it all in a nice form is an open challenge.
+I work both on Cosmology and String Theory, trying to explain the first using the second. I was born in Milan, Italy, and before moving to New York City I studied Physics at [Pavia University](http://www.unipv.eu/site/en/home.html) and [SISSA](https://www.sissa.it/).
 
-You can find a list of my papers down here and my [CV in pdf]({filename}/files/CV.pdf). Feel free to contact me at <roberto.gobbetti@nyu.edu>.
+In more details, my research focuses on some fundamental questions: how did the universe begin? Why is it so flat and uniform seen from a large scale? What drives its accelarated expansion? It turns out that in order to answer these questions, one needs to understand the interplay of Quantum Field Theory and Gravity. I tackle them in the framework of String Theory, which is the most promising theory of Quantum Gravity. I have been working on the physics of Inflation and how Inflation could happen in a Landscape scenario like the one predicted by String Theory.
+
+You can find a list of my papers down here, my [profile page](http://web.science.uu.nl/itf/People/postdoc/Gobbetti.htm) and my [CV in pdf]({filename}/files/CV.pdf). Feel free to contact me at <r.gobbetti@uu.nl>.
+
+You can also find some unrelated projects I worked on in my spare time in the [projects page](http://gobboph.github.io/projects.html) of the website.
 
 
 
 
 ## Publications
 
-1.  G. D'Amico, R. Gobbetti, M. Kleban, M. Schillo, *Large-Scale Anomalies from Primordial Dissipation*, JCAP 11 (2013) 013, Jun 2013, [arXiv:1306.6872](http://arxiv.org/abs/1306.6872).
-2. G. D'Amico, R. Gobbetti, M. Kleban, M. Schillo, *Unwinding Inflation*, JCAP 1303 (2013) 004, Nov 2012 [arXiv:1211.4589](http://arxiv.org/abs/1211.4589).
-3. G. D'Amico, R. Gobbetti, M. Kleban, M. Schillo, *Inflation from Flux Cascades*, Phys.Lett. B725 (2013) 218-222, Nov 2012 [arXiv:1211.3416](http://arxiv.org/abs/1211.3416).
-4. R. Gobbetti, M. Kleban, *Analyzing Cosmic Bubble Collisions*, JCAP 1205 (2012) 025, Jan 2012, [arXiv:1201.6380](http://arxiv.org/abs/1201.6380).
+1. G. D'Amico, R. Gobbetti, M. Kleban, M. Schillo, *D-brane scattering and annihilation*, Aug 2014 [arXiv:1408.2540](http://arxiv.org/abs/arXiv:1408.2540).
+2.  G. D'Amico, R. Gobbetti, M. Kleban, M. Schillo, *Large-Scale Anomalies from Primordial Dissipation*, JCAP 11 (2013) 013, Jun 2013, [arXiv:1306.6872](http://arxiv.org/abs/1306.6872).
+3. G. D'Amico, R. Gobbetti, M. Kleban, M. Schillo, *Unwinding Inflation*, JCAP 1303 (2013) 004, Nov 2012 [arXiv:1211.4589](http://arxiv.org/abs/1211.4589).
+4. G. D'Amico, R. Gobbetti, M. Kleban, M. Schillo, *Inflation from Flux Cascades*, Phys.Lett. B725 (2013) 218-222, Nov 2012 [arXiv:1211.3416](http://arxiv.org/abs/1211.3416).
+5. R. Gobbetti, M. Kleban, *Analyzing Cosmic Bubble Collisions*, JCAP 1205 (2012) 025, Jan 2012, [arXiv:1201.6380](http://arxiv.org/abs/1201.6380).
 
-Or check out the [list](http://inspirehep.net/search?ln=en&p=find+a+gobbetti&of=hb&action_search=Search) and [author page](http://inspirehep.net/search?ln=en&p=find+a+gobbetti&of=hb&action_search=Search) on inspire
+Or check out the [list](http://inspirehep.net/search?ln=en&p=find+a+gobbetti&of=hb&action_search=Search) and [author page](http://inspirehep.net/author/profile/R.Gobbetti.1) on inspire
 
 
 
