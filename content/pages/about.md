@@ -17,7 +17,7 @@ In more details, my research focuses on some fundamental questions: how did the 
 
 You can find a list of my papers down here, my [profile page](http://web.science.uu.nl/itf/People/postdoc/Gobbetti.htm) and my [CV in pdf]({filename}/files/CV.pdf). Feel free to contact me at <r.gobbetti@uu.nl>.
 
-You can also find some unrelated projects I worked on in my spare time in the [projects page](http://gobboph.github.io/projects.html) of the website.
+You can also find some unrelated projects I worked on in my spare time in the [projects](http://gobboph.github.io/projects.html) page of the website.
 
 
 
