@@ -1,5 +1,5 @@
 from pelican import signals
-from .mdx_liquid_tags import LiquidTags
+from .mdx_liquid_tags import LiquidTags, LT_CONFIG # ADDED LT_CONFIG !!!
 
 
 def addLiquidTags(gen):
@@ -8,7 +8,15 @@ def addLiquidTags(gen):
         gen.settings['MD_EXTENSIONS'] = DEFAULT_CONFIG['MD_EXTENSIONS']
 
     if LiquidTags not in gen.settings['MD_EXTENSIONS']:
-        configs = dict(settings=gen.settings)
+#        configs = dict(settings=gen.settings)
+        # ADDED
+        configs = dict()
+        for key,value in LT_CONFIG.items():
+            configs[key]=value
+        for key,value in gen.settings.items():
+            if key in LT_CONFIG:
+                configs[key]=value
+        #TILL HERE
         gen.settings['MD_EXTENSIONS'].append(LiquidTags(configs))
 
 

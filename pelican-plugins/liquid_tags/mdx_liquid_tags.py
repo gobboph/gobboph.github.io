@@ -20,6 +20,13 @@ from functools import wraps
 LIQUID_TAG = re.compile(r'\{%.*?%\}')
 EXTRACT_TAG = re.compile(r'(?:\s*)(\S+)(?:\s*)')
 
+LT_CONFIG = { 'CODE_DIR': 'code', # ADDED
+              'NOTEBOOK_DIR': 'notebooks' # ADDED
+} # ADDED
+LT_HELP = { 'CODE_DIR' : 'Code directory for include_code subplugin', # ADDED
+            'NOTEBOOK_DIR' : 'Notebook directory for notebook subplugin' # ADDED
+} # ADDED
+
 
 class _LiquidTagsPreprocessor(markdown.preprocessors.Preprocessor):
     _tags = {}
@@ -51,6 +58,19 @@ class _LiquidTagsPreprocessor(markdown.preprocessors.Preprocessor):
 
 class LiquidTags(markdown.Extension):
     """Wrapper for MDPreprocessor"""
+    #ADDED THIS WHOLE FUNCTION!!!
+    def __init__(self, config):
+        try:
+            # Needed for markdown versions >= 2.5
+            for key,value in LT_CONFIG.items():
+                self.config[key] = [value,LT_HELP[key]]
+            super(LiquidTags,self).__init__(**config)
+        except AttributeError:
+            # Markdown versions < 2.5
+            for key,value in LT_CONFIG.items():
+                config[key] = [config[key],LT_HELP[key]]
+            super(LiquidTags,self).__init__(config)
+
     @classmethod
     def register(cls, tag):
         """Decorator to register a new include tag"""

@@ -18,6 +18,8 @@ from codecs import open
 from pelican import signals, contents
 from pelican.utils import get_date
 
+from pytz import timezone
+
 TXT_HEADER = """{0}/index.html
 {0}/archives.html
 {0}/tags.html
@@ -60,6 +62,11 @@ class SitemapGenerator(object):
         self.context = context
         self.now = datetime.now()
         self.siteurl = settings.get('SITEURL')
+
+        self.default_timezone = settings.get('TIMEZONE', 'UTC')
+        self.timezone = getattr(self, 'timezone', self.default_timezone)
+        self.timezone = timezone(self.timezone)
+
 
         self.format = 'xml'
 
@@ -166,11 +173,11 @@ class SitemapGenerator(object):
 
     def set_url_wrappers_modification_date(self, wrappers):
         for (wrapper, articles) in wrappers:
-            lastmod = datetime.min
+            lastmod = datetime.min.replace(tzinfo=self.timezone)
             for article in articles:
                 lastmod = max(lastmod, article.date)
                 try:
-                    modified = self.get_date_modified(article, datetime.min);
+                    modified = self.get_date_modified(article, datetime.min.replace(tzinfo=self.timezone));
                     lastmod = max(lastmod, modified)
                 except ValueError:
                     # Supressed: user will be notified.

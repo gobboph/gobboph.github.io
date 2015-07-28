@@ -261,8 +261,9 @@ def notebook(preprocessor, tag, markup):
     else:
         end = None
 
-    settings = preprocessor.configs.config['settings']
-    nb_dir =  settings.get('NOTEBOOK_DIR', 'notebooks')
+ #   settings = preprocessor.configs.config['settings']
+ #   nb_dir =  settings.get('NOTEBOOK_DIR', 'notebooks')
+    nb_dir = preprocessor.configs.getConfig('NOTEBOOK_DIR') # ADDED!!!
     nb_path = os.path.join('content', nb_dir, src)
 
     if not os.path.exists(nb_path):
