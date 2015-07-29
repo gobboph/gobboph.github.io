@@ -40,7 +40,7 @@ Or check out the [list](http://inspirehep.net/search?ln=en&p=find+a+gobbetti&of=
 ## Selected Talks
 
 1. *Brane Dynamics and Unwinding Inflation*, Cornell University, Ithaca, U.S.A., 02/2015 ([pdf]({filename}/files/Cornell.pdf)).
-2. *Unwinding Inflation and Brane Dynamics*, Hong Kong Institute for Advanced Study, Hong Kong, 05/2015 ([pdf]({filename}/fiels/poster_HK2.pdf)).
+2. *Unwinding Inflation and Brane Dynamics*, Hong Kong Institute for Advanced Study, Hong Kong, 05/2015 ([pdf]({filename}/files/poster_HK2.pdf)).
 3. *Unwinding Inflation*, New York University - Abu Dhabi, Abu Dhabi, UAE, 11/2014 ([pdf]({filename}/files/NYU-AD.pdf)).
 4. *Unwinding Inflation*, International Center for Theoretical Physics (ICTP), Trieste, Italy, 05/2014 ([pdf]({filename}/files/ICTP.pdf)).
 5. *Cosmic Bubble Collisions*, Yukawa Institute for Theoretical Physics (YITP), Kyoto, Japan, 07/2012 ([pdf]({filename}/files/YITP.pdf)).
