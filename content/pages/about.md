@@ -23,7 +23,7 @@ You can find a list of my papers down here, my [profile page](http://web.science
 
 ## Publications
 
-1. R. Gobbetti, E. Pajer, D. Roest, *On the Three Primordial Numbers*, May 2015, [arXiv:1505.00968](http://arxiv.org/abs/1505.00968).
+1. R. Gobbetti, E. Pajer, D. Roest, *On the Three Primordial Numbers*, May 2015, JCAP 1509 (2015) 09, 058, [arXiv:1505.00968](http://arxiv.org/abs/1505.00968).
 2. G. D'Amico, R. Gobbetti, M. Kleban, M. Schillo, *D-brane scattering and annihilation*, JHEP 1501 (2015) 050, Aug 2014 [arXiv:1408.2540](http://arxiv.org/abs/arXiv:1408.2540).
 3.  G. D'Amico, R. Gobbetti, M. Kleban, M. Schillo, *Large-Scale Anomalies from Primordial Dissipation*, JCAP 11 (2013) 013, Jun 2013, [arXiv:1306.6872](http://arxiv.org/abs/1306.6872).
 4. G. D'Amico, R. Gobbetti, M. Kleban, M. Schillo, *Unwinding Inflation*, JCAP 1303 (2013) 004, Nov 2012 [arXiv:1211.4589](http://arxiv.org/abs/1211.4589).
