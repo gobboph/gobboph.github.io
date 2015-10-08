@@ -15,7 +15,7 @@ I work both on Cosmology and String Theory, trying to explain the first using th
 
 In more details, my research focuses on some fundamental questions: how did the universe begin? Why is it so flat and uniform seen from a large scale? What drives its accelarated expansion? It turns out that in order to answer these questions, one needs to understand the interplay of Quantum Field Theory and Gravity. I tackle them in the framework of String Theory, which is the most promising theory of Quantum Gravity. I have been working on the physics of Inflation and how Inflation could happen in a Landscape scenario like the one predicted by String Theory.
 
-My interests outside from physics span from traveling to politics and programming. [Here](http://gobboph.github.io/projects.html) are some non physics related projects I worked and am still working on, while [here](http://gobboph.github.io/blog) is a blog I am constantly planning to be more active on.
+My interests outside from physics span from programming to politics and traveling. [Here](http://gobboph.github.io/projects.html) are some non physics related projects I worked and am still working on, while [here](http://gobboph.github.io/blog) is a blog I am constantly planning to be more active on.
 
 You can find a list of my papers down here, my [profile page](http://web.science.uu.nl/itf/People/postdoc/Gobbetti.htm) and my [CV in pdf]({filename}/files/CV.pdf). Feel free to contact me at <r.gobbetti@uu.nl>.
 
