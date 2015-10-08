@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Roberto Gobbetti, ">
+
+
+        <title>Congress Words // Roberto Gobbetti // </title>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://localhost:8000/theme/css/pure.css">
+    <link rel="stylesheet" href="http://localhost:8000/theme/css/pygments.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
+</head>
+
+<body>
+<div class="pure-g-r" id="layout">
+    <div class="sidebar sidebar-article pure-u">
+        <header class="header-article">
+            <hgroup>
+                <a href="http://localhost:8000/blog/author/roberto-gobbetti/" title="See posts by Roberto Gobbetti">
+                    <img class="article-avatar" alt="Roberto Gobbetti" src="http://www.gravatar.com/avatar/24b3dc72ade2326bdc5c9741bd02aa51">
+                </a>
+                <h2 class="article-info">Roberto Gobbetti</h2>
+                <small class="about-author"></small>
+                <h5>published</h5>
+                <p>Mon 14 April 2014</p>
+                <a href="/">&larr;Home</a>
+            </hgroup>
+        </header>
+    </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>Congress Words</h1>
+                        <p class="post-meta">
+                            // under
+                                <a class="post-category" href="http://localhost:8000/blog/tag/programming/">programming</a>
+                                <a class="post-category" href="http://localhost:8000/blog/tag/social/">social</a>
+                            in <a class="post-category" href="http://localhost:8000/blog/category/programming/">programming</a>
+                        </p>
+                </header>
+            </section>
+            <p>I spent a night last week having fun while working out this new project on github: <a href="https://github.com/gobboph/congress_words">congress_words</a>. Using the API's of <a href="capitolwords.org">capitolwords.org</a>, the scripts outputs a map of the US colored accordingly to how many times a given word or sentence of your choice has been pronunced by a representative of each state, of course normalized by number of state representatives.</p>
+<p>I find this to be a fantastic tool for procrastination and I plan to develop it into a website soon (it is important to be able to procrastinate no matter where we are). So come back to it soon!</p>
+            <div class="hr"></div>
+            <a href="#" class="go-top">Go Top</a>
+<div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = "gobbo_ph"; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div><footer class="footer">
+    <p>&copy; Roberto Gobbetti 2014 &ndash;
+        Built with a modified <a href="https://github.com/svenkreiss/pure">Pure Theme</a>
+        for <a href="http://blog.getpelican.com/">Pelican</a>.
+    </p>
+</footer>        </div>
+    </div>
+</div>
+    <script>
+        var $top = $('.go-top');
+
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $top.fadeIn(200);
+            } else {
+                $top.fadeOut(200);
+            }
+        });
+
+        // Animate the scroll to top
+        $top.click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+        })
+
+        // Makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        $('body').on('click', 'a[href="#"]', function(event) {
+            event.preventDefault();
+        });
+    </script>
+</body>
+</html>
