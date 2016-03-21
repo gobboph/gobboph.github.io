@@ -42,7 +42,7 @@ STATIC_PATHS = (['images', 'files', 'extras'])
 
 EXTRA_PATH_METADATA = {
     #'extras/robots.txt': {'path': 'robots.txt'},
-    #'extras/favicon.ico': {'path': 'favicon.ico'},
+    'extras/favicon.ico': {'path': 'favicon.ico'},
 }
 
 
