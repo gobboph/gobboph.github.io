@@ -7,7 +7,7 @@ url: /
 save_as: index.html
 
 
-{% img img-thumbnail float-right /images/face.jpg 250 %}
+{% img img-thumbnail float-left /images/face_round.png 250 %}
 
 I am a postdoctoral researcher at [Delta Institute for Theoretical Physics](http://www.d-itp.nl/) and at the [Institute for Theoretical Physics](http://web.science.uu.nl/itf/), at [Utrecht University](www.uu.nl/en). I moved to the Netherlands after receiving my Ph.D. in Physics at [New York University](http://www.nyu.edu) where I worked at the [Center for Cosmology and Particle Physics](http://ccpp.nyu.edu/).
 
