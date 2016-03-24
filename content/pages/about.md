@@ -9,7 +9,7 @@ save_as: index.html
 
 {% img img-thumbnail float-left /images/face_round.png 200 %}
 
-I am a cosmologist, which means I invent mechanisms to create the universe. I use string theory to do that.
+I am a cosmologist, which means I invent ways to create the universe. I use string theory to do that.
 
 I love data too. I enjoy recovering stories from messy piles of information. I use python to do that.
 
