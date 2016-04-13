@@ -21,7 +21,7 @@ Here are some of the things I worked and am working on.
 
 ## NYC taxi data
 
-(work in progress) I have been analyzing taxi data. So far this produced some pretty maps of New York City like the one in the side bar (pickup location in red and dropoff location in green). The map in orange here is intended to show the most lucrative locations to pick passengers up (in $/h). Check out the Projects page for a bigger image and a more detailed analysis soon.
+I have been analyzing taxi data. So far this produced some pretty maps of New York City like the one in the side bar (pickup location in red and dropoff location in green). The map in orange here is intended to show the most lucrative locations to pick passengers up (in $/h). Check out the Projects page for a bigger image and a more detailed analysis soon (work in progress).
 
 
 ## congress_words
