@@ -15,16 +15,16 @@ I love data too. I enjoy recovering stories from messy piles of information. I u
 
 You can find me in the Netherlands as well as in New York City. I am based in the former where I hold a position at Delta-ITP. I studied in NYC and still spend a great deal of time there.
 
-Here are some of the things I worked and am working on.
+*Here is a snapshot of academic and non academic projects that I worked on.*
 
-{% img img-thumbnail float-right /images/bin_tot.png 300 %}
+{% img img-thumbnail float-right /images/taxi_2013/tot_jan2013.png 300 %}
 
 ## NYC taxi data
 
-I have been analyzing taxi data. So far this produced some pretty maps of New York City like the one in the side bar (pickup location in red and dropoff location in green). The map in orange here is intended to show the most lucrative locations to pick passengers up (in $/h). Check out the Projects page for a bigger image and a more detailed analysis soon (work in progress).
+I have been analyzing taxi data. So far this produced some pretty maps of New York City like the one in the side bar (pickup locations in red and dropoff locations in light green). The map in orange here shows the most lucrative locations to pick passengers up (in $/h). Please check my related [blog post](http://gobboph.github.io/blog/taxi_rides/) for a full explanation of my analysis and more plots.
 
 
-## congress_words
+## Congress Words
 
 {% img img-thumbnail float-left /images/welfare.png 300 %}
 
@@ -32,14 +32,14 @@ Check out the [congress_words](http://gobboph.github.io/congress_words/) website
 
 <br><br />
 
-## election_words
+## Election Words
 
 Ever wondered what you should be talking about if you want to get elected to congress? The [election_words](http://gobboph.github.io/election_words/) website shows you the words that are spoken the most by the representatives that got re-elected the most in each state.
 
 
-[//]: # (## portfolio tracker)
+## Portfolio Tracker
 
-[//]: # (The [portfolio tracker](http://gobboph.github.io/Portfolio_Tracker/) is exactly what it sounds like: a python tool that allows you to manage your stock portfolio. You can buy and get rid of stocks within it while keeping track of the value of the whole portfolio, whether real or imaginary.)
+The [portfolio tracker](http://gobboph.github.io/Portfolio_Tracker/) is exactly what it sounds like: a python tool that allows you to manage your stock portfolio. You can buy and get rid of stocks within it while keeping track of the value of the whole portfolio, whether real or imaginary.
 
 
 ## Publications
