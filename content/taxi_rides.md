@@ -20,7 +20,7 @@ These are easily taken care of, but what surprised me was that lots of people do
 
 I populated the tip column with a linear model based on the card payers and the data was pretty much good to go for further analysis.
 
-Now, how to assign value to a cab ride? Easiest answer: (totale fare) / (ride duration). The problem with this first approximation is that it does not take into account the time that cabs spend finding new customers, i.e. not making money. Still I could not track every single cab. Luckily some [old data](http://www.andresmh.com/nyctaxitrips/) has the info needed. I dowloaded the first set that is there, i.e. Jan 2013, and that is the base for all that follows.
+Now, how to assign value to a cab ride? Easiest answer: (totale fare) / (ride duration). The problem with this first approximation is that it does not take into account the time that cabs spend finding new customers, i.e. not making money. Still I could not track every single cab. Luckily some [old data](http://www.andresmh.com/nyctaxitrips/) has the info needed. I dowloaded the first set that you find there, i.e. Jan 2013, and that is the base for all that follows.
 
 After combining and cleaneing this dataset as well, I computed the wait between two clients, here as average for hour of the day. Notice the gigantic variance even after I took care of cabs out of service.
 
@@ -41,6 +41,19 @@ The few cabs out at 5am are doing well (maybe because no one else is around) and
 Finally, here are a few more maps (you might want to enlarge it, but a blownup example is under it). For each hour of the day the data is pixeled and the maps are colored according to the average trip value in each pixel. Pixels with too few cab pickups are discarded: there might be some very valuable trip, but still it is not adviseble to drive a particular area if there is just a couple of pickups a month.
 
 <center><img src="../../images/taxi_2013/panel_jan2013.png" alt="value panel" style="width: 800px;"/></center>
+
+As seen above, the middle of the day is not great, but downtown is consistently the best spot. One can also locate JFK and La Guardia airports: they are not necessarily the best spot in town, but they are a sure catch (as expected): the waiting involved probably takes down the trip value even if the total fare is high. Here is a blownup map for 9pm.
+
+<center><img src="../../images/taxi_2013/example_jan2013_21.png" alt="example map" style="width: 600px;"/></center>
+
+Just to check I thought it would be fun to see what parameters matter the most in determining the value of each trip (duration and total fare apart, of course). I trained a random forest and here is the result.
+
+<center><img src="../../images/taxi_2013/features_jan2013.png" alt="features" style="width: 600px;"/></center>
+
+It turns out that cabs make more or less the same money whether it is holiday or not and what matter most is the hour of the day they are out working.
+
+Location is missing: I am planning to classify the rides by neighborhood and the panel above clearly shows that different neighborhoods will yield different trip values. The most straighforward endgame for this study would be an app that advices cab driver on where to drive in order to maximize the dollars per hour, given features and location.
+
 
 
 
