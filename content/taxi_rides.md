@@ -8,7 +8,7 @@ Summary: Where should I drive my cab to make more money?
 
 Like many others this past year, I stumbled on the impressive set of [TLC Trip Data](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) and could not resist taking my turn at seeing where the NYC cabs like to hang out. I planned to find where are the best spots for cabs to pick people up at different times of the day in orer to maximize their hourly income. I will explain here how and show you some plots, you can find code and more images in my [github repo](https://github.com/gobboph/nycabs).
 
-The information is a lot. The data encompass all the taxi rides from Jan 2009 to Dec 2015. For each month there are O(10^7) rides for wihch is given pickup coordinates and datetime, dropoff coordinates and datetime, trip distance, passenger count, total amount paid split in categories, payment method. The files' size oscillates between 1.8-2.2 Gb per month.
+There is a lot of data. They encompass all the taxi rides from Jan 2009 to Dec 2015. For each month there are O(10^7) rides for wihch is given pickup coordinates and datetime, dropoff coordinates and datetime, trip distance, passenger count, total amount paid split in categories, payment method. The files' size oscillates between 1.8-2.2 Gb per month.
 
 First thing first, I downloaded Jan 2015 (literally the first file you see on the website) and here is a cool map of New York City drown by scatter plotting pickup (in red) and dropoff (green) locations for the whole month.
 
@@ -24,7 +24,7 @@ Now, how to assign value to a cab ride? Easiest answer: (totale fare) / (ride du
 
 After combining and cleaneing this dataset as well, I computed the wait between two clients, here as average for hour of the day. Notice the gigantic variance even after I took care of cabs out of service.
 
-<center><img src="../../images/taxi_2013/wait_jan2013.png" alt="NYC by cabs" style="width: 600px;"/></center>
+<center><img src="../../images/taxi_2013/wait_jan2013.png" alt="Cabs wait" style="width: 600px;"/></center>
 
 Going on, I defined the trip value as:
 
@@ -32,11 +32,15 @@ Going on, I defined the trip value as:
 
 and plotted it as a function of the hour of the day and day of the month (in red weekends and holidays).
 
-<center><img src="../../images/taxi_2013/valueperhour_jan2013.png" alt="NYC by cabs" style="width: 600px;"/></center>
+<center><img src="../../images/taxi_2013/valueperhour_jan2013.png" alt="value per hour" style="width: 600px;"/></center>
 
-<center><img src="../../images/taxi_2013/valueperday_jan2013.png" alt="NYC by cabs" style="width: 600px;"/></center>
+<center><img src="../../images/taxi_2013/valueperday_jan2013.png" alt="value per day" style="width: 600px;"/></center>
 
-The few cabs out at 5am are doing well (maybe exactly because there are not many around) and then there is a good peak for after work. From the day of the month barplot we can easily infer that drunk folks like to take cabs after new year's eve celebration. Also, the drivers seem to make increasingly more money as the week progresses
+The few cabs out at 5am are doing well (maybe because no one else is around) and then there is a peak after work. From the day of the month barplot we can easily infer that drunk folks like to take cabs after new year's eve celebration. Also, the drivers seem to make increasingly more $/h as the week progresses.
+
+Finally, here are a few more maps (you might want to enlarge it, but a blownup example is under it). For each hour of the day the data is pixeled and the maps are colored according to the average trip value in each pixel. Pixels with too few cab pickups are discarded: there might be some very valuable trip, but still it is not adviseble to drive a particular area if there is just a couple of pickups a month.
+
+<center><img src="../../images/taxi_2013/panel_jan2013.png" alt="value panel" style="width: 800px;"/></center>
 
 
 
