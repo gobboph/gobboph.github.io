@@ -4,7 +4,7 @@ Authors: Roberto Gobbetti
 Summary: Projects
 Slug: projects
 
-Here is a (not so complete) list of projects/idea/stuff not physics related, that I have worked on or I am working on right now:
+Here is a list of projects/ideas/stuff that I have worked or I am working on right now:
 
 * [NYC taxi rides](http://gobboph.github.io/blog/taxi_rides/): I took on analyzing the [TLC Trip Data](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) in order to find the areas and times that would give cab drivers higher returns for their time. Checkout the [blog](http://gobboph.github.io/blog/taxi_rides/) for a deeper explanation and lots of cool maps!
 
