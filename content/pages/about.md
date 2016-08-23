@@ -44,12 +44,13 @@ The [portfolio tracker](http://gobboph.github.io/Portfolio_Tracker/) is exactly 
 
 ## Publications
 
-1. R. Gobbetti, E. Pajer, D. Roest, *On the Three Primordial Numbers*, May 2015, JCAP 1509 (2015) 09, 058, [arXiv:1505.00968](http://arxiv.org/abs/1505.00968).
-2. G. D'Amico, R. Gobbetti, M. Kleban, M. Schillo, *D-brane scattering and annihilation*, JHEP 1501 (2015) 050, Aug 2014 [arXiv:1408.2540](http://arxiv.org/abs/arXiv:1408.2540).
-3.  G. D'Amico, R. Gobbetti, M. Kleban, M. Schillo, *Large-Scale Anomalies from Primordial Dissipation*, JCAP 11 (2013) 013, Jun 2013, [arXiv:1306.6872](http://arxiv.org/abs/1306.6872).
-4. G. D'Amico, R. Gobbetti, M. Kleban, M. Schillo, *Unwinding Inflation*, JCAP 1303 (2013) 004, Nov 2012 [arXiv:1211.4589](http://arxiv.org/abs/1211.4589).
-5. G. D'Amico, R. Gobbetti, M. Kleban, M. Schillo, *Inflation from Flux Cascades*, Phys.Lett. B725 (2013) 218-222, Nov 2012 [arXiv:1211.3416](http://arxiv.org/abs/1211.3416).
-6. R. Gobbetti, M. Kleban, *Analyzing Cosmic Bubble Collisions*, JCAP 1205 (2012) 025, Jan 2012, [arXiv:1201.6380](http://arxiv.org/abs/1201.6380).
+1. B. Freivogel, R. Gobbetti, E. Pajer, I-S. Yang, *Inflation on a Slippery Slope*, Jul 2016, [arXiv:1608.00041](https://arxiv.org/abs/1608.00041).
+2. R. Gobbetti, E. Pajer, D. Roest, *On the Three Primordial Numbers*, May 2015, JCAP 1509 (2015) 09, 058, [arXiv:1505.00968](http://arxiv.org/abs/1505.00968).
+3. G. D'Amico, R. Gobbetti, M. Kleban, M. Schillo, *D-brane scattering and annihilation*, JHEP 1501 (2015) 050, Aug 2014 [arXiv:1408.2540](http://arxiv.org/abs/arXiv:1408.2540).
+4.  G. D'Amico, R. Gobbetti, M. Kleban, M. Schillo, *Large-Scale Anomalies from Primordial Dissipation*, JCAP 11 (2013) 013, Jun 2013, [arXiv:1306.6872](http://arxiv.org/abs/1306.6872).
+5. G. D'Amico, R. Gobbetti, M. Kleban, M. Schillo, *Unwinding Inflation*, JCAP 1303 (2013) 004, Nov 2012 [arXiv:1211.4589](http://arxiv.org/abs/1211.4589).
+6. G. D'Amico, R. Gobbetti, M. Kleban, M. Schillo, *Inflation from Flux Cascades*, Phys.Lett. B725 (2013) 218-222, Nov 2012 [arXiv:1211.3416](http://arxiv.org/abs/1211.3416).
+7. R. Gobbetti, M. Kleban, *Analyzing Cosmic Bubble Collisions*, JCAP 1205 (2012) 025, Jan 2012, [arXiv:1201.6380](http://arxiv.org/abs/1201.6380).
 
 Or check out the [list](http://inspirehep.net/search?ln=en&p=find+a+gobbetti&of=hb&action_search=Search) and [author page](http://inspirehep.net/author/profile/R.Gobbetti.1) on inspire
 

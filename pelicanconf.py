@@ -91,8 +91,8 @@ TAGS_SAVE_AS = 'blog/tags.html'
 
 MENUITEMS = [
 	('Projects', 'projects.html'),
-	('Blog', 'blog/'),
-	('CV', 'files/CV.pdf')
+	('Resume', 'files/resume.pdf'),
+	('Blog', 'blog/')
 ]
 DISPLAY_PAGES_ON_MENU = True
 
