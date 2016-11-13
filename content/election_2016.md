@@ -1,6 +1,6 @@
 Title: Don't shoot the messenger!
 Date: 2016-11-12 18:30
-Category: data, politics
+Category: politics
 Tags: data, social
 Slug: election_2016
 Author: Roberto Gobbetti
@@ -27,5 +27,5 @@ Once anyone cooks up any risk model that spits out a probability for a given eve
 
 To conclude, it is frustrating to see serious newspapers seemingly struggling to understand the statistical nature of a risk assessment. If all the polls were perfectly conducted (which they were not) and all the modelers had all the right assumptions (which seems unlikely), and we were told that Clinton had 90% chance of winning, this still would imply that there is a scenario in 10 that makes her lose. It is up to us then to decide if we are happy living with that or not.
 
-PS: for a more in depth analysis, checkout the latest article on [FiveThirtyEight](http://fivethirtyeight.com/features/why-fivethirtyeight-gave-trump-a-better-chance-than-almost-anyone-else/).
+PS: for a more in depth analysis on some of these aspects, checkout the latest article on [FiveThirtyEight](http://fivethirtyeight.com/features/why-fivethirtyeight-gave-trump-a-better-chance-than-almost-anyone-else/).
 
