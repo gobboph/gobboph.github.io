@@ -9,13 +9,20 @@ save_as: index.html
 
 {% img img-thumbnail float-left /images/face_round.png 200 %}
 
-I am a cosmologist, which means I invent ways to create the universe. I use String Theory to do that.
+I am a data scientist. I enjoy recovering stories from messy piles of information. I use Python to do that.
 
-I love data too. I enjoy recovering stories from messy piles of information. I use Python to do that.
+I am a cosmologist too, which means I invent ways to create the universe. I use String Theory to do that.
 
-You can find me in the Netherlands as well as in New York City. I am based in the former where I hold a position at Delta-ITP. I studied in NYC and still spend a great deal of time there.
+You can find me in New York City, where I am a fellow at Insight Data Science. I just moved back here after a postdoc in the Netherlands.
+
+<!--You can find me in the Netherlands as well as in New York City. I am based in the former where I hold a position at Delta-ITP. I studied in NYC and still spend a great deal of time there.-->
 
 *Here is a snapshot of academic and non academic projects that I worked on.*
+
+## Wikipedia and the news
+
+[WhatHappenedThere?](http://whathappenedthere.xyz/) is a tool that matches Wikipedia traffic spikes with breaking news. A spike in traffic signals an increased interest in the webpage. This app helps pointing out the reasons beahind it by connecting spikes and events. After you input your topic of interest, the app finds the relative Wikipedia page, downloads the time series and automatically detects the spikes. It then queries a database storing New York Times articles and returns the ones deemed the most relevant by a natural language processing algorithm.
+
 
 {% img img-thumbnail float-right /images/taxi_2013/tot_jan2013.png 300 %}
 
@@ -28,9 +35,11 @@ I have been analyzing taxi data. So far this produced some pretty maps of New Yo
 
 {% img img-thumbnail float-left /images/welfare.png 300 %}
 
-Check out the [congress_words](http://gobboph.github.io/congress_words/) website. Input whichever word or sentence you want and see who said that the most in congress with a colored map of the States. Here is an example with the word "welfare", but more details are on the Projects page.
+The [congress_words](https://github.com/gobboph/congress_words) project was built to see who discussed a certain topic in congress the most. It was based on Sunlight Foundation API that has since been discontinued, but you can still check out the code on [github](https://github.com/gobboph/congress_words). Here is snippet of the the output of the app with the word "welfare", but you can get more details on how it worked on the Project page.
 
-<br><br />
+<!--Check out the [congress_words](http://gobboph.github.io/congress_words/) website. Input whichever word or sentence you want and see who said that the most in congress with a colored map of the States. Here is an example with the word "welfare", but more details are on the Projects page.-->
+
+<br>
 
 ## Election Words
 
