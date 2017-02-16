@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Roberto Gobbetti, ">
+
+        <link rel="alternate"  href="/feeds/all.atom.xml" type="application/atom+xml" title="Roberto Gobbetti Full Atom Feed"/>
+
+        <title>What Happened There? // Roberto Gobbetti // </title>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/theme/css/pure.css">
+    <link rel="stylesheet" href="/theme/css/pygments.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
+</head>
+
+<body>
+<div class="pure-g-r" id="layout">
+    <div class="sidebar sidebar-article pure-u">
+        <header class="header-article">
+            <hgroup>
+                <a href="/blog/author/roberto-gobbetti/" title="See posts by Roberto Gobbetti">
+                    <img class="article-avatar" alt="Roberto Gobbetti" src="http://www.gravatar.com/avatar/24b3dc72ade2326bdc5c9741bd02aa51">
+                </a>
+                <h2 class="article-info">Roberto Gobbetti</h2>
+                <small class="about-author"></small>
+                <h5>published</h5>
+                <p>Wed 15 February 2017</p>
+                <a href="/">&larr;Home</a>
+            </hgroup>
+        </header>
+    </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>What Happened There?</h1>
+                        <p class="post-meta">
+                            // under
+                                <a class="post-category" href="/blog/tag/data/">data</a>
+                            in <a class="post-category" href="/blog/category/data/">data</a>
+                        </p>
+                </header>
+            </section>
+            <p>Time series are omnipresent. If you were around in 2008, you probably have seen the graph of a financial index collapsing from one day to another. Alternatively you might check the temperature prediction for each hour of the day before leaving in the morning. A time series is nothing more than a set of values with a time stamp and represents how a certain quantity changes over time.</p>
+<p>Time series often have very recognizable features (e.g. a big drop in the stock prices). The number of daily views of a Wikipedia webpage (its traffic) usually displays big spikes if people show particular interest in its main topic, but it can be hard to figure out why people were interested in a particular person or entity, especially time after the triggering event happened.</p>
+<p>Here is where <a href="http://whathappenedthere.xyz/">WhatHappenedThere?</a> enters the scene. Given a topic, the app downloads the time series of its associated Wikipedia page (if it exists) and automatically detects the spikes. It then queries a database storing all the New York Times articles since the earliest time in the Wikipedia time series (July 2015) and returns a list of most relevant articles according to a natural language processing (NLP) algorithm. I will use this blog post to get into the details of what goes on behind the curtains.</p>
+<p>A bit of context: I worked on this project during my fellowship at Insight Data Science and discussed the developments with the team at About.com. The development of the app took a couple of weeks from idea to completion and if it works well now, there are definitely directions where it could be improved. As will be clear by the end of this blog post, WhatHappenedThere? provides a proof of concept for the power of connecting a time series with a source of context to automatically provide insights. For even more details than what I will talk about here, please check the <a href="https://github.com/gobboph/WhatHappenedThere">GitHub</a> page for this project.</p>
+<p>The very first thing that happens once a value is input in the app, this uses wikipedia API's to retrieve the time series with the associated page (check the <a href="https://github.com/gobboph/WhatHappenedThere/blob/master/application/flasknews/wiki.py">wiki</a> module on GitHub). The app consists of 3 separate parts joined together:</p>
+<ul>
+<li>
+<h4><a href="#spikes">Spike detection in Time Series</a></h4>
+</li>
+<li>
+<h4><a href="#search">Database query</a></h4>
+</li>
+<li>
+<h4><a href="#nlp">NLP on retrieved documents</a></h4>
+</li>
+</ul>
+<h3><a name="spikes">Spike detection</a></h3>
+<p>The spike detection algorithm is coded up in the <a href="https://github.com/gobboph/WhatHappenedThere/blob/master/application/flasknews/anomalies.py">anomalies</a> module you can see on GitHub. The algorithm keeps a window period (let's say 30 days) prior to the date I am interested in checking for a spike. It computes the mean and standard deviation and classifies the value as a spike (anomaly) if it falls outside the range of $avg \pm tolerance \times std$. Both the window period and the tolerance are parameters.</p>
+<p>In the precise case of detecting spikes in webpage traffic, one must bear in mind that the daily distribution of visits has a <a href="https://en.wikipedia.org/wiki/Heavy-tailed_distribution">heavy tail</a>, hence the very large spikes we want to detect.  From this point of view, one might think that keeping track of the mean and standard deviation would not be a good approach since the assumption behind this approach is that the distribution of daily views is Gaussian. Still, for all practical purposes, this approach works well as long as the tolerance is kept very high. The app declares a spike when a value is more than 6 standard deviations away from the null hypothesis. For reference, 5 is enough to declare that the Higgs boson does indeed exist.</p>
+<p>Maybe it could be better to treat the daily distribution as a Poissonian. This would not be a big modification: we just need to change the standard deviation to the mean. The net result is not much different and again, the app does a posteriori find the peaks that are relevant. I have not thoroughly delved into autoregressive models as they would take longer and defeat the purpose of having a quick and responsive online app, but they are definitely a diretion one should explore if interested in developing this further.</p>
+<p>A third parameter is an absolute threshold. This is useful for my particulr application: if a Wikipedia page has 30 views on average and 200 one day, this might as well be a spike, but probably not one that made the news and should be disregarded.</p>
+<h3><a name="search">Database search</a></h3>
+<p>The second source of data is a record of all the articles published by the New York Times since July 2015 (the earliest date in the Wikipedia time series). I downloaded the articles using the <a href="https://developer.nytimes.com/">NYT  Archive API</a> and stored them with PostgresSQL. The data provided by the API is not complete, meaning the whole body of the article is not provided. Still, there is quite a bit of text in the headline, abstract and lead paragraph, and of course there are the publication dates.</p>
+<p>The search is nothing more than a SQL query that looks for articles within a date bracket and regarding a topic. It is coded up in the <a href="https://github.com/gobboph/WhatHappenedThere/blob/master/application/flasknews/nyt.py">nyt</a> module. Although the coding part is in itself trivial, there is an interesting precision vs. recall problem here, <em>i.e.</em> how to maximize the number of articles that are relevant, while minimizing the number of irrelevant that get picked up anyway.</p>
+<p>There is no perfect solution to this problem. Let me explain with an example: I had initially decided to search for each word in the Wikipedia page name. The reason behind this was that the data for each article is limited and that the NLP part of the project would take care of giving more relevance to the topic I want over others. The drawback of this is clear: if you look for "David Bowie", the algorithm would pick any article referring to anyone called David.</p>
+<p>Alternatively, I tried maximizing precision and searching for the full string. The app would pick up only very spefic articles, but at the expense of others. An article referring to "President Obama" would not appear, since the app would look for "Barack Obama" only. Also, there is no article explicitly citing "List of earthquakes in Italy", and I would lose all the context provided by the first method.</p>
+<p>I eventually settled for precision when I noticed friends were getting frustrated by getting wrong results more than getting no result at all. As of now, the algorithm queries for the full Wikipedia name or the full string inserted. This way searching for "Obama" gives more results than searching for "Barack Obama", but you avoid learning about minor politicians when looking for "Michael Jordan".</p>
+<h3><a name="nlp">NLP</a></h3>
+<p>The last piece of the picture is extracting meaningful information from the articles. Not having the whole body of the article might look like a problem, but in a sense it helps making things easier: you can think of it as if the New York Times did some part of the job already by weeding out the non essential information. The clear counterpart is that you do not get anything about people relevant enough to be in the news, but not as the main charater of the story.</p>
+<p>An example: "Sergio Mattarella" is the president of Italy and has a big spike in december 2016, the weekend of an important referendum, but still gets no article. The articles that cite "Matteo Renzi" (Italy's prime minister, a more significant role) would probably cite Mattarella in the body, but he did not make the headline or lead paragraph.</p>
+<p>However one wants to see it, the relatively small amount of data per article, together with the time constraint of computing things on the fly, calls for a fast approach. The app takes all the articles relative to a spike and computes the <a href="https://en.wikipedia.org/wiki/Tf%E2%80%93idf">tf-idf score</a> of each word ranking them from the most relevant to the least. This helps extracting concepts.</p>
+<p>What we really want is to find the most relevant articles though. The way to do this is to define a measure to compute <em>distance</em> between articles and then find which one has the lowest sum of distances.</p>
+<p>We can treat each article as a vector in the space of all the words in all the articles: it will have a 0 in the direction of a word that does not appear there, 1 if the word appear once and so on. I chose to implement cosine similarity, which consists in taking the normalized dot product of two vectors A and B. This would just be the cosine of the angle between them: the highest this value (closest to 1) the more similar, or closest, the vectors are. The app computes the cosine similarity between each pair of articles and sums the values for each article: the article that has the highest score is the one whose topics are most similar to most other articles in the batch.</p>
+<p>The list of most relevant 10 articles per spike is printed to screen together with a nice word cloud. You can click on each headline and read the article.</p>
+<h3>Conclusions</h3>
+<p>Perhaps the main drawback of the app is the limitation of the context data, <em>i.e.</em> the New York Times corpus. The New York Times is a biased source of context, as it gives more relevance to certain news, like politics for example. It is not the best publication to figure out what a certain actor or pop star has been up to for example (although "Beyonce" works pretty well). One can easily overcome this limitation with a more varied dataset.</p>
+<p>Apart from the fun app, this project shows how much power one gains from connecting a time series with a context data set. It is easy to imagine an application to an array of other cases, from studying video views to store revenues. The code described in this post is broken down to minimize dependencies and each part could be easily introduced into a new set of operations.</p><script type= "text/javascript">
+    if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+        var mathjaxscript = document.createElement('script');
+        mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+        mathjaxscript.type = 'text/javascript';
+        mathjaxscript.src = 'https:' == document.location.protocol
+                ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+                : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+            "MathJax.Hub.Config({" +
+            "    config: ['MMLorHTML.js']," +
+            "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+            "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+            "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+            "    displayAlign: 'center'," +
+            "    displayIndent: '0em'," +
+            "    showMathMenu: true," +
+            "    tex2jax: { " +
+            "        inlineMath: [ ['$','$'] ], " +
+            "        displayMath: [ ['$$','$$'] ]," +
+            "        processEscapes: true," +
+            "        preview: 'TeX'," +
+            "    }, " +
+            "    'HTML-CSS': { " +
+            "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+            "    } " +
+            "}); ";
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+    }
+</script>
+
+            <div class="hr"></div>
+            <a href="#" class="go-top">Go Top</a>
+<div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = "gobbo_ph"; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div><footer class="footer">
+    <p>&copy; Roberto Gobbetti 2014 &ndash;
+        Built with a modified <a href="https://github.com/svenkreiss/pure">Pure Theme</a>
+        for <a href="http://blog.getpelican.com/">Pelican</a>.
+    </p>
+</footer>        </div>
+    </div>
+</div>
+    <script>
+        var $top = $('.go-top');
+
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $top.fadeIn(200);
+            } else {
+                $top.fadeOut(200);
+            }
+        });
+
+        // Animate the scroll to top
+        $top.click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+        })
+
+        // Makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        $('body').on('click', 'a[href="#"]', function(event) {
+            event.preventDefault();
+        });
+    </script>
+</body>
+</html>
