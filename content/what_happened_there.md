@@ -12,4 +12,4 @@ Time series often have very recognizable features (e.g. a big drop in the stock 
 
 Here is where [WhatHappenedThere?](http://whathappenedthere.xyz/) enters the scene. Given a topic, the app downloads the time series of its associated Wikipedia page (if it exists) and automatically detects the spikes. It then queries a database storing all the New York Times articles since the earliest time in the Wikipedia time series (July 2015) and returns a list of most relevant articles according to my natural language processing (NLP) algorithm. I will use this blog post to get into the details of what goes on behind the curtains.
 
-A bit of context: I worked on this project during my fellowship at Insight Data Science and discussed the developments with the team at About.com.
+A bit of context: I worked on this project during my fellowship at Insight Data Science and discussed the developments with the team at About.com. As will be clear by the end of this blog post, WhatHappenedThere? provides a proof of concept for the power of connecting a time series with a source of context to automaticall retrieve insights.
