@@ -21,14 +21,14 @@ You can find me in New York City, where I am a fellow at Insight Data Science. I
 
 ## Wikipedia and the news
 
-[WhatHappenedThere?](http://whathappenedthere.xyz/) is a tool that matches Wikipedia traffic spikes with breaking news. A spike in traffic signals an increased interest in the webpage. This app helps pointing out the reasons beahind it by connecting spikes and events. After you input your topic of interest, the app finds the relative Wikipedia page, downloads the time series and automatically detects the spikes. It then queries a database storing New York Times articles and returns the ones deemed the most relevant by a natural language processing algorithm.
+[WhatHappenedThere?](http://whathappenedthere.xyz/) is a tool that matches Wikipedia traffic spikes with breaking news. A spike in traffic signals an increased interest in the webpage. This app helps to point out the reasons beahind the increase interest by connecting spikes and events. When you input a topic of interest, the app finds the relevant Wikipedia page, downloads the time series and automatically detects the spikes in traffic. It then queries a database of New York Times articles and returns those articles deemed the most relevant by a natural language processing algorithm. For more details plese check out the [blog post](http://gobboph.github.io/blog/wht/) about this project.
 
 
 {% img img-thumbnail float-right /images/taxi_2013/tot_jan2013.png 300 %}
 
 ## NYC taxi data
 
-I have been analyzing taxi data. So far this produced some pretty maps of New York City like the one in the side bar (pickup locations in red and dropoff locations in light green). The map in orange here shows the most lucrative locations to pick passengers up (in $/h). Please check my related [blog post](http://gobboph.github.io/blog/taxi_rides/) for a full explanation of my analysis and more plots.
+I have been analyzing taxi data. So far this produced some pretty maps of New York City like the one in the side bar (pickup locations in red and dropoff locations in light green). The map in orange here shows the most lucrative locations to pick passengers up (in $/h). Please check out my related [blog post](http://gobboph.github.io/blog/taxi_rides/) for a full explanation of my analysis and more plots.
 
 
 ## Congress Words
