@@ -21,7 +21,7 @@ You can find me in New York City, where I am a fellow at Insight Data Science. I
 
 ## Wikipedia and the news
 
-[WhatHappenedThere?](http://whathappenedthere.xyz/) is a tool that matches Wikipedia traffic spikes with breaking news. A spike in traffic signals an increased interest in the webpage. This app helps to point out the reasons beahind the increased interest by connecting spikes and events. When you input a topic of interest, the app finds the relevant Wikipedia page, downloads the time series and automatically detects the spikes in traffic. It then queries a database of New York Times articles and returns those articles deemed the most relevant by a natural language processing algorithm. For more details plese check out the [blog post](http://gobboph.github.io/blog/wht/) about this project.
+[WhatHappenedThere?](http://whathappenedthere.xyz/) is a tool that matches Wikipedia traffic spikes with breaking news. A spike in traffic signals an increased interest in the webpage. This app helps to point out the reasons behind the increased interest by connecting spikes and events. When you input a topic of interest, the app finds the relevant Wikipedia page, downloads the time series and automatically detects the spikes in traffic. It then queries a database of New York Times articles and returns those articles deemed the most relevant by a natural language processing algorithm. For more details plese check out the [blog post](http://gobboph.github.io/blog/wht/) about this project.
 
 
 {% img img-thumbnail float-right /images/taxi_2013/tot_jan2013.png 300 %}
