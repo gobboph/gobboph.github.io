@@ -9,9 +9,11 @@ save_as: index.html
 
 {% img img-thumbnail float-left /images/face_round.png 200 %}
 
-I am a data scientist at eBay and a former theoretical cosmologist.
+I am a data scientist at eBay and a former Theoretical Cosmologist.
 
-In this page you can find links to relevant information about my current role, my academic career and some side projects I have worked on.
+In my academic career I used String Theory to cook up models of the early universe. Now I use Python to recover stories from messy piles of data.
+
+You can find me in New York City.
 
 <!--I am a data scientist. I enjoy recovering stories from messy piles of information. I use Python to do that.
 
