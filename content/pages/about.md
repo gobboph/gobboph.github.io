@@ -9,13 +9,15 @@ save_as: index.html
 
 {% img img-thumbnail float-left /images/face_round.png 200 %}
 
-I am a data scientist. I enjoy recovering stories from messy piles of information. I use Python to do that.
+I am a data scientist at eBay and a former theoretical cosmologist.
+
+In this page you can find links to relevant information about my current role, my academic career and some side projects I have worked on.
+
+<!--I am a data scientist. I enjoy recovering stories from messy piles of information. I use Python to do that.
 
 I am a cosmologist too, which means I invent ways to create the universe. I use String Theory to do that.
 
-You can find me in New York City, where I am a fellow at Insight Data Science. I just moved back here after a postdoc in the Netherlands.
-
-<!--You can find me in the Netherlands as well as in New York City. I am based in the former where I hold a position at Delta-ITP. I studied in NYC and still spend a great deal of time there.-->
+You can find me in New York City, where I am a fellow at Insight Data Science. I just moved back here after a postdoc in the Netherlands.-->
 
 *Here is a snapshot of academic and non academic projects that I worked on.*
 
